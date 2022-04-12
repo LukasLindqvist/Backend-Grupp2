@@ -16,13 +16,8 @@ async function getDataFromStrapi(){
 
     myObject.data.forEach(element => {
         let attr = element.attributes;
-
-/*         for(x in attr){
-            console.log(x + ": " + attr[x])
-        } */
-        
+                
         //create output
-        //document.write(`Animal: ${attr.Animal}`)
         output += `<div>
                         <h1>${attr.title}</h1>
                         <img src=${attr.image} alt="" srcset="">
