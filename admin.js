@@ -1,9 +1,8 @@
-//Funktion för att hämta data från Strapi CMS
+//Function to get data from strapi
 async function getDataFromStrapi() {
-    //Url till Strapi.js API för att hämta alla Pokemons
+    //Url from strapi to get access to products api
     let url = "http://localhost:1337/api/products";
 
-    //Hämtar JSON från API och konverterar det till JS objekt
     let stringResponse = await fetch(url);
     let myObjekt = await stringResponse.json();
 
@@ -124,7 +123,7 @@ async function postData() {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
-            "Authorization" : "Bearer " + token //Inkluderar Token från inloggning tidigare.
+            "Authorization" : "Bearer " + token 
         },
         body: JSON.stringify(cactusObjekt)
     });
